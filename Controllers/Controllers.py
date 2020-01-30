@@ -133,13 +133,16 @@ class LoginController:
         Carga la lista de Personal recibida de Context '''
         self.listaPersonal = Context.cargarPersonal()
     
-    def verificarUsuario(self,keycode):
-        '''Verifica que el usuario exista y su Rol'''
+    def verificarUsuario(self,username,password):
+        '''# Verificar Usuario\nVerifica que el usuario exista y su Rol'''
+        keycode = username + password
         exists = False
         rol = ""
         for user in self.listaPersonal:
             if user.Keycode == keycode:
                 exists = True
-                rol = roles[keycode[0:3]]
-        return exists,rol
-        
+        return exists
+    
+    def getRol(self,usr):
+        '''# Get Rol\nObtiene el rol del usuario'''
+        return self.roles[usr[0:3]]

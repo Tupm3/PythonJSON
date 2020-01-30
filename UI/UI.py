@@ -25,7 +25,8 @@ class UI(object):
         lc = LoginController()
         usr = input("Ingresa tu usuario:    ")
         psw = input("Ingresa tu contraseña: ")
-        exists,rol = lc.verificarUsuario()
+        if (lc.verificarUsuario(usr,psw)): rol = lc.getRol(usr)
+
 
 
         
