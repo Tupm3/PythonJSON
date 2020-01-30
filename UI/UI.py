@@ -1,5 +1,4 @@
 import os,time
-from Models.Context.py import Context
 from Controllers.Controllers import LoginController
 class UI(object):
     '''# Clase UI\n

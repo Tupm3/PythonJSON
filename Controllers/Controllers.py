@@ -14,7 +14,7 @@ class VendedorController:
     def cargarListaInventario(self):
         '''# Cargar\n
         Carga la lista de inventario recibiendo de Context'''
-       self.listaInventario = Context.cargarInventario()
+        sself.listaInventario = Context.cargarInventario()
     
     def updateListaInventario(self):
         '''# Actualizar\nEnvía la lista de inventario al Context para actualizar el archivo JSON'''
@@ -86,23 +86,24 @@ class SupervisorController(VendedorController):
         self.updateListaInventario()
 
 class Sys_AdminController:
-     '''# Controlador de Sys_Admin\n
+    '''# Controlador de Sys_Admin\n
     Puede:
     - Crear Personal\n
     - Editar Personal\n
     Contiene:\n
     - Lista de Personal'''
+
     def __init__(self):
         '''Carga la lista de Personal al instanciarse'''
         self.listaPersonal = Context.cargarPersonal()
 
-    def updateListaPersonal():
+    def updateListaPersonal(self):
         '''# Actualizar\n
         Manda actualizar la lista de Personal al Context'''
         Context.updatePersonal(self.listaPersonal)
         self.updateListaPersonal()
     
-    def cargarListaPersonal():
+    def cargarListaPersonal(self):
         '''# Cargar\n
         Carga la lista de Personal recibida de Context '''
         self.listaPersonal = Context.cargarPersonal()
