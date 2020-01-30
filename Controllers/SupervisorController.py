@@ -18,7 +18,7 @@ class SupervisorController(VendedorController):
         '''# Agregar Producto\n
         Modifica la cantidad de existencias de un producto'''
         for product in self.listaInventario:
-            if product.ID == idn: product.Existencias += cantidad
+            if product.ID == idn: product["Existencias"] += cantidad
     
     def crearProducto(self,idn,existencias,nombre,precio):
         '''# Crear Producto\n
