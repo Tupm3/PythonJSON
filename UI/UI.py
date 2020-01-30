@@ -34,7 +34,7 @@ class UI(object):
         print("Usuario Verificado...")
         print("Cargando UI.",end ="")
         for c in range(0,5):
-            time.sleep(0.5)
+            time.sleep(0.8)
             print(".",end ="")
         
 
