@@ -36,7 +36,9 @@ class Context:
             '''Abrir el archivo JSON de Personal para cargar los contenidos en una lista'''
             with open(PERSONALDB, 'r') as jsonFile: lines = jsonFile.read()
             lista = json.loads(lines)
-        except FileNotFoundError as fnf: print("No hay archivo JSON Existente") '''Si no hay archivo'''
+        except FileNotFoundError as fnf: 
+            print("No hay archivo JSON Existente") 
+            '''Si no hay archivo'''
         return lista
     
     @staticmethod

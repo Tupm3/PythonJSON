@@ -1,6 +1,6 @@
-from Models.Context import Context
+import os,time
+from Models.Context.py import Context
 from Controllers.Controllers import LoginController
-import os
 class UI(object):
     '''# Clase UI\n
     Clase que contiene todas las pantallas y entradas que requieran interacción con el Usuario.\n
@@ -12,20 +12,32 @@ class UI(object):
         pass
     
     @staticmethod
-    def menuSysAdmin(parameter_list):
+    def menuSysAdmin():
         pass
 
     @staticmethod
-    def menuSupervisor(parameter_list):
+    def menuSupervisor():
         pass
 
     @staticmethod
     def login():
         '''# Login\n Funcion inicial del Programa'''
         lc = LoginController()
-        usr = input("Ingresa tu usuario:    ")
-        psw = input("Ingresa tu contraseña: ")
-        if (lc.verificarUsuario(usr,psw)): rol = lc.getRol(usr)
+        verified = False
+        while not verified:
+            os.system("cls")
+            usr = input("Ingresa tu usuario:    ")
+            psw = input("Ingresa tu contraseña: ")
+            if (lc.verificarUsuario(usr,psw)): 
+                rol = lc.getRol(usr)
+                verified = True
+        os.system("Cls")
+        print("Usuario Verificado...")
+        print("Cargando UI.",end ="")
+        for c in range(0,5):
+            time.sleep(0.5)
+            print(".",end ="")
+        
 
 
 
