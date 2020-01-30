@@ -1,5 +1,4 @@
 from Models.Context import Context
-
 class LoginController:
     '''# Controlador de Login\n
     Puede:\n
@@ -29,3 +28,9 @@ class LoginController:
     def getRol(self,usr):
         '''# Get Rol\nObtiene el rol del usuario'''
         return self.roles[usr[0:3]]
+    
+    def getUser(self,keycode):
+        for user in self.listaPersonal:
+            if user["Keycode"] == keycode:
+                return user
+        
