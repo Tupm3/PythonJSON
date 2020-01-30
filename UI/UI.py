@@ -10,22 +10,21 @@ class UI(object):
     def menuVendedor(user):
         finished = False
         while not finished:
-            print("|"+"Bienvenido Vendedor".center(28," "),user["Nombre"]+"|")
     
     @staticmethod
     def menuSysAdmin(user):
         finished = False
         while not finished:
-            print("|"+"Bienvenido SysAdmin".center(28," "),user["Nombre"]+"|")
 
     @staticmethod
     def menuSupervisor(user):
         finished = False
         while not finished:
-            print("|"+"Bienvenido Supervisor".center(28," "),user["Nombre"]+"|")
+
 
     @staticmethod
     def menu(rol,user):
+        msg="|"+"Bienvenido {}".center(28," "),user["Nombre"]+"|".format(rol)
         if rol == "Vendedor": UI.menuVendedor(user)
         elif rol == "Supervisor": UI.menuSupervisor(user)
         elif rol == "Sys_Admin": UI.menuSysAdmin(user)
