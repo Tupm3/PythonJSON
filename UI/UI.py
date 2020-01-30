@@ -1,5 +1,5 @@
 import os,time
-from Controllers.Controllers import LoginController
+from Controllers.LoginController import LoginController
 class UI(object):
     '''# Clase UI\n
     Clase que contiene todas las pantallas y entradas que requieran interacción con el Usuario.\n
