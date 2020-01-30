@@ -1,0 +1,23 @@
+[
+    {
+        "Nombre": "Tona",
+        "Rol": "Sys_Admin",
+        "Edad": "18",
+        "Keycode": "sysjediulisesCoquito$1",
+        "Status": 1
+    },
+    {
+        "Nombre": "Akeno",
+        "Rol": "Supervisor",
+        "Edad": "18",
+        "Keycode": "supaeaquinorosasFoldup.fir777",
+        "Status": 1
+    },
+    {
+        "Nombre": "Ruben",
+        "Rol": "Vendedor",
+        "Edad": "18",
+        "Keycode": "venruben@Esclavo13",
+        "Status": 1
+    }
+]

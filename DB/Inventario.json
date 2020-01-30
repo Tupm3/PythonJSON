@@ -1,0 +1,23 @@
+[
+    {
+        "ID": 1,
+        "Existencias": 10,
+        "Nombre_Producto": "GTX 1660 TI",
+        "Precio_Unitario": 6000
+    },{
+        "ID": 2,
+        "Existencias": 5,
+        "Nombre_Producto": "GTX 1660 SUPER",
+        "Precio_Unitario": 5400
+    },{
+        "ID": 3,
+        "Existencias": 6,
+        "Nombre_Producto": "RTX 2060",
+        "Precio_Unitario": 9000
+    },{
+        "ID": 4,
+        "Existencias": 1,
+        "Nombre_Producto": "RX 5700 XT",
+        "Precio_Unitario": 9000
+    }
+]
