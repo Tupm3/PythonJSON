@@ -1,6 +1,7 @@
 # PythonJSON
 -------------
 Prueba para guardar datos en archivos JSON teniendo 2 principales de "base de datos".
+**El archivo debe ejecutarse desde Main.py**
 
 ## Archivos JSON
 Dentro del archivo "Personal.json" se encuentran los objetos que pueden:
