@@ -56,4 +56,5 @@ En el código hay varios paquetes:
         * Guarda todos los objetos de personal creados.
 
 **Notas adicionales: Dentro de cada clase hay documentación correspondiente a cada método**
-Última modificación: 31/01/2019 12:23 
+
+Última modificación: 31/01/2019 12:24 
