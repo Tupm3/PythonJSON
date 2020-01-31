@@ -23,13 +23,13 @@ En el código hay varios paquetes:
 * Models: Dentro se encuentra todo lo relacionado a los JSONs.
     * Plantillas para objetos:
         | Persona | Producto |
-        |---------|----------|
-        | Nombre  |     ID      |
-        | Edad    |  Existencias|
-        | Rol     | Nombre del Producto |
-        | Usuario | Precio Unitario |
-        |Contraseña  |                 |
-        | Status  |             |
+        |:---------:|:----------:|
+        | Nombre     |     ID              |
+        | Edad       |  Existencias        |
+        | Rol        | Nombre del Producto |
+        | Usuario    | Precio Unitario     |
+        |Contraseña  |         -           |
+        | Status     |         -           |
                       
     * Manejo de archivos:
         * Context: Conección directa con los archivos JSON.
