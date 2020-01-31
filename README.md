@@ -22,20 +22,15 @@ En el código hay varios paquetes:
 * UI: Dentro está la clase UI que contiene las pantallas de Menu y Login para los diferentes objetos.
 * Models: Dentro se encuentra todo lo relacionado a los JSONs.
     * Plantillas para objetos:
-        * Persona:
-            * Requiere:
-                * Nombre
-                * Edad
-                * Rol
-                * Usuario
-                * Contraseña
-                * Status (//TODO)
-        * Producto: 
-            * Requiere:
-                * ID
-                * Existencias
-                * Nombre del Producto
-                * Precio Unitario
+        | Persona | Producto |
+        |---------|----------|
+        | Nombre  |     ID      |
+        | Edad    |  Existencias|
+        | Rol     | Nombre del Producto |
+        | Usuario | Precio Unitario |
+        |Contraseña  |                 |
+        | Status  |             |
+                      
     * Manejo de archivos:
         * Context: Conección directa con los archivos JSON.
             * Contiene métodos para escribir y leer dichos archivos.
