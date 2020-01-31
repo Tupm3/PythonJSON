@@ -1,10 +1,10 @@
 # PythonJSON
-=============
+===================================================================================
 
 Prueba para guardar datos en archivos JSON teniendo 2 principales de "base de datos".
-
-Dentro del archivo "Personal.json" se encuentran los objetos que pueden:
+##Archivos
 ------------------------------------------------------------------------
+Dentro del archivo "Personal.json" se encuentran los objetos que pueden:
 + Supervisor
         + Vender
         + Agregar o modificar inventario
@@ -16,19 +16,20 @@ Dentro del archivo "Personal.json" se encuentran los objetos que pueden:
 Dentro del archivo "Inventario.json" se encuentran los objetos:
     + Productos
 
-En el código hay varios paquetes:
+##Paquetes
 ---------------------------------
-+ UI: Dentro está la clase UI que contiene las pantallas de menu y login para los diferentes objetos.
-+ Models: Dentro se encuentra todo lo relacionado a los JSONs.
-        Plantillas para objetos:\n
-        + Persona:\n
-            + Requiere:\n
-                + Nombre\n
-                + Edad\n
-                + Rol\n
-                + Usuario\n
-                + Contraseña\n
-                + Status (//TODO)\n
+En el código hay varios paquetes:
+* UI: Dentro está la clase UI que contiene las pantallas de menu y login para los diferentes objetos.
+* Models: Dentro se encuentra todo lo relacionado a los JSONs.
+        * Plantillas para objetos:\n
+        * Persona:\n
+            * Requiere:\n
+                * Nombre\n
+                * Edad\n
+                * Rol\n
+                * Usuario\n
+                * Contraseña\n
+                * Status (//TODO)\n
         + Producto: \n
             + Requiere:
                 + ID\n
