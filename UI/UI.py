@@ -22,7 +22,9 @@ class UI(object):
             print("2) Editar Personal")
             print("3) Salir")
             while op<=0 or op>3:
-                op = input("Selecciona una opción: ")
+                try:
+                    op = int(input("Selecciona una opción: "))
+                except Exception as e: pass
             
         login()
 
@@ -38,8 +40,8 @@ class UI(object):
 
     @staticmethod
     def menu(rol,user):
-        msg = " Bienvenido {} ".format(rol)
-        print("|"+msg.center(28,"*")+"|")
+        msg = " Bienvenido {} {} ".format(rol,user["Nombre"])
+        print("|"+msg.center(28," ")+"|")
         if rol == "Vendedor": UI.menuVendedor(user)
         elif rol == "Supervisor": UI.menuSupervisor(user)
         elif rol == "Sys_Admin": UI.menuSysAdmin(user)
