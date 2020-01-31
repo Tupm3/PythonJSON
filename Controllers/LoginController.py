@@ -30,6 +30,7 @@ class LoginController:
         return self.roles[usr[0:3]]
     
     def getUser(self,keycode):
+        '''# Get User\n Regresa el objeto usuario (__dict__) '''
         for user in self.listaPersonal:
             if user["Keycode"] == keycode:
                 return user

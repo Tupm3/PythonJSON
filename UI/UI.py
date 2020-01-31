@@ -9,11 +9,22 @@ class UI(object):
         - No se necesita instanciar un objeto para iniciar los métodos'''
     @staticmethod
     def menuVendedor(user):
+        '''# Menu Vendedor\n
+        Pantalla de control de Vendedor\n
+        - Opciones:\n
+            - 1) Iniciar Venta\n
+            - 2) Salir'''
         finished = False
         while not finished: pass
     
     @staticmethod
     def menuSysAdmin(user):
+        '''# Menu Sys_Admin\n
+        Pantalla de control de Sys Admin\n
+        - Opciones:\n
+            - 1) Crear Personal\n
+            - 2) Editar Personal\n
+            - 3) Salir'''
         op = 0
         finished = False
         while not finished:
@@ -24,11 +35,14 @@ class UI(object):
             while op<=0 or op>3:
                 try:
                     op = int(input("Selecciona una opción: "))
-                except Exception as e: pass
+                    if op == 3: finished = True
+                except Exception as e: print("Error, reiniciando menu")
             
-        login()
+        UI.startLogin()
 
     def reset(msg):
+        '''# Reset Programa\n
+        Vuelve a ejecutar el Login '''
         print(msg)
         p = input("Presiona cualquier tecla")
 
@@ -56,6 +70,7 @@ class UI(object):
         while not verified:
             usr = input("Ingresa tu usuario:    ")
             psw = input("Ingresa tu contraseña: ")
+            if usr == "s": exit()
             if (lc.verificarUsuario(usr,psw)): 
                 rol = lc.getRol(usr)
                 verified = True
