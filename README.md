@@ -1,5 +1,4 @@
 # PythonJSON
-=============
 Prueba para guardar datos en archivos JSON teniendo 2 principales de "base de datos".
 
 ## Archivos
