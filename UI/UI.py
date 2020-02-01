@@ -36,13 +36,10 @@ class UI(object):
             while op<=0 or op>3:
                 '''Verifica que el input de op esté entre 1 y 3'''
                 try:
-                    op = int(input("Selecciona una opción: "))
-                    if op == 3: finished = True
-                        '''Lanza la bandera de finalizar'''
+                    op = int(input("Selecciona una opción: ")) # Pide seleccionar una opcion. Puede ocurrir que se envíe un tipo de variable no válido como un str
+                    if op == 3: finished = True #Lanza la bandera de finalizar
                 except Exception as e: print("Error, reiniciando menu") #En caso de un error no controlado
-            
-        UI.startLogin()
-        '''El programa vuelve a empezar desde el login'''
+        UI.startLogin() #El programa vuelve a iniciar el Login
 
     @staticmethod
     def menuSupervisor(user):'''# Menu Vendedor\n
@@ -57,9 +54,9 @@ class UI(object):
 
 
     @staticmethod
-    def menu(rol,user):
+    def menu(user):
         '''# Menu\n Menu generico de los 3 tipos de personal'''
-        msg = " Bienvenido {} {} ".format(rol,user["Nombre"])
+        msg = " Bienvenido {} {} ".format(user["Rol"],user["Nombre"])
         print("|"+msg.center(28," ")+"|") #Formato de la impresion del mensaje
         if rol == "Vendedor": UI.menuVendedor(user)
         elif rol == "Supervisor": UI.menuSupervisor(user)
@@ -78,14 +75,13 @@ class UI(object):
             psw = input("Ingresa tu contraseña: ")
             if usr == "s": exit() #Se teclea 's' en el usuario para salir del loop de Login
             if (lc.verificarUsuario(usr,psw)): #Si el keycode coincide con algún usuario registrado
-                rol = lc.getRol(usr) #Manda llamar el Rol del usuario desde el LoginController
-                verified = True
+                verified = True #Manda que el usuario si existe en la base de datos
             if not verified:
                 ''' Si se detecta que el usuario no existe o no concuerdan las credenciales,
                     volverá a pedirlas'''
                 os.system('cls')
                 print("Ingresa un usuario válido ")
-        os.system("Cls")
+        os.system("cls") #Vuelve a limpiar la pantalla
         print("Usuario Verificado...")
         print("Cargando Interfaz.",end ="")
         for c in range(0,5): #Para que parezca que está cargando realmente la interfaz.
@@ -93,10 +89,9 @@ class UI(object):
             print(".",end ="")#Imprime los puntos de "carga"
         user = lc.getUser(usr+psw) #Manda llamar al usuario desde el LoginController
         os.system('cls')
-        return rol,user
+        return user #Regresa el objeto de usuario
     
     def startLogin():
         '''# Start Login\n Método Inicial del Programa\n Debido a que login devuelve tanto el rol como el usuario en si, 
         se usa este método para hacer el Main.py más corto'''
-        rol,user = UI.login() #Recibe el rol y el usuario
-        UI.menu(rol,user) #Los manda al menu genérico para que acceda según sus capacidades
+        UI.menu(UI.login) #Inicia el menu generico de los 3 usuarios
